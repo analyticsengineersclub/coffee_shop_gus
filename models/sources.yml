@@ -47,3 +47,16 @@ sources:
             tests:
               - unique
               - not_null
+              
+# name = schema name in bigquery
+  - name: web_tracking
+# project = bigquery project name
+    project: analytics-engineers-club
+    tables:
+      - name: pageviews
+# Tests    
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
