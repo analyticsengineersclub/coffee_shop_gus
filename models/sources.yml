@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+# name = schema name in bigquery
+  - name: coffee_shop
+# project = bigquery project name
+    project: analytics-engineers-club
+
+# begin list declaring tables in CDW as "sources"
+    tables:
+      - name: customers
+# Tests    
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: order_items
+# Tests    
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: orders
+# Tests    
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: product_prices
+# Tests    
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: products
+# Tests    
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
