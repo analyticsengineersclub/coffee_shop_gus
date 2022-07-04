@@ -1,0 +1,12 @@
+version: 2
+
+models:
+# stage_customers.sql
+  - name: stage_customers
+    description: adding aggregate columns to customers table
+# Tests    
+    columns:
+      - name: lifetime_spend
+        description: Primary key of the model
+        tests:
+          - not_null
