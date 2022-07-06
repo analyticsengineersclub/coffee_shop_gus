@@ -4,6 +4,7 @@ SELECT
     ,DATE(o.order_datetime) AS order_date
     ,TIME(o.order_datetime) AS order_time
     ,c.customer_name
+    ,c.customer_id
     ,oi.order_item_id
     ,p.product_name
     ,p.product_category
