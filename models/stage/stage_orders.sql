@@ -7,6 +7,7 @@ SELECT
     ,c.customer_id
     ,oi.order_item_id
     ,p.product_name
+    ,p.product_id
     ,p.product_category
     ,o.order_total
     ,o.order_state
