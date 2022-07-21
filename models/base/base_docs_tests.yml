@@ -1,0 +1,13 @@
+version: 2
+
+models:
+# base_product_prices.sql
+  - name: base_product_prices
+    description: product prices by date range where price is valid
+# Tests    
+    tests: 
+      - dbt_utils.mutually_exclusive_ranges:
+          lower_bound_column: price_valid_start
+          upper_bound_column: price_valid_end
+          partition_by: product_id
+          gaps: not_allowed
